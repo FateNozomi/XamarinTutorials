@@ -22,7 +22,7 @@ namespace Engine.Shared.Base
         /// </summary>
         public virtual void Init()
         {
-
+            Renderer.Instance.Init(InitialResolution);
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace Engine.Shared.Base
         /// </summary>
         internal void Draw()
         {
-
+            Renderer.Instance.Draw();
         }
     }
 }
