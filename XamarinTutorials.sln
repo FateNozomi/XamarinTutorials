@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Engine.Shared", "Engine.Shared\Engine.Shared.shproj", "{8B387E95-7F29-4436-9086-15973C8F7FB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{2C250034-C139-42F6-BDB6-A1A524DF5952}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game", "Game", "{C8822F38-C1CB-4B6A-99C3-7EC8F3FE9F89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine.Android", "Engine.Android\Engine.Android.csproj", "{A4BFEA54-0FF4-4D2D-8D8B-2EA412E7E669}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Game.Shared", "Game.Shared\Game.Shared.shproj", "{F4A98371-251A-44E4-851B-4742F571B752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Android", "Game.Android\Game.Android.csproj", "{CEE3DB33-39F3-42C6-8C5A-E2FDDE3BAF92}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Engine.Shared\Engine.Shared.projitems*{8b387e95-7f29-4436-9086-15973c8f7fb8}*SharedItemsImports = 13
+		Engine.Shared\Engine.Shared.projitems*{a4bfea54-0ff4-4d2d-8d8b-2ea412e7e669}*SharedItemsImports = 4
+		Game.Shared\Game.Shared.projitems*{cee3db33-39f3-42c6-8c5a-e2fdde3baf92}*SharedItemsImports = 4
+		Game.Shared\Game.Shared.projitems*{f4a98371-251a-44e4-851b-4742f571b752}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4BFEA54-0FF4-4D2D-8D8B-2EA412E7E669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4BFEA54-0FF4-4D2D-8D8B-2EA412E7E669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4BFEA54-0FF4-4D2D-8D8B-2EA412E7E669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4BFEA54-0FF4-4D2D-8D8B-2EA412E7E669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEE3DB33-39F3-42C6-8C5A-E2FDDE3BAF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE3DB33-39F3-42C6-8C5A-E2FDDE3BAF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE3DB33-39F3-42C6-8C5A-E2FDDE3BAF92}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CEE3DB33-39F3-42C6-8C5A-E2FDDE3BAF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE3DB33-39F3-42C6-8C5A-E2FDDE3BAF92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEE3DB33-39F3-42C6-8C5A-E2FDDE3BAF92}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B387E95-7F29-4436-9086-15973C8F7FB8} = {2C250034-C139-42F6-BDB6-A1A524DF5952}
+		{A4BFEA54-0FF4-4D2D-8D8B-2EA412E7E669} = {2C250034-C139-42F6-BDB6-A1A524DF5952}
+		{F4A98371-251A-44E4-851B-4742F571B752} = {C8822F38-C1CB-4B6A-99C3-7EC8F3FE9F89}
+		{CEE3DB33-39F3-42C6-8C5A-E2FDDE3BAF92} = {C8822F38-C1CB-4B6A-99C3-7EC8F3FE9F89}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDA83583-4984-4417-90BD-B720924AA24F}
+	EndGlobalSection
+EndGlobal
