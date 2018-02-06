@@ -11,6 +11,9 @@ namespace Game.Shared.Base
     /// </summary>
     public class GLGame : BaseGame
     {
+        /// <summary>
+        /// The target resolution for the game
+        /// </summary>
         public override Vector2 InitialResolution => new Vector2(1920, 1080);
 
         /// <summary>
@@ -18,6 +21,16 @@ namespace Game.Shared.Base
         /// </summary>
         public GLGame()
         {
+        }
+
+        /// <summary>
+        /// Calculates the extra offset based on the difference in height between the target and the actual resolution
+        /// </summary>
+        /// <param name="heightDifference"></param>
+        /// <returns></returns>
+        protected override Vector2 CalculateExtraOffset(float heightDifference)
+        {
+            return new Vector2(0, 0);
         }
     }
 }

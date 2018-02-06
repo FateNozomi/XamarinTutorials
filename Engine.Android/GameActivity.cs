@@ -5,11 +5,13 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Engine.Shared.Base;
+using OpenTK;
 
 namespace Engine.Android
 {
@@ -42,7 +44,9 @@ namespace Engine.Android
         {
             base.OnCreate(savedInstanceState);
             _view = new CustomGLView(this, _gameInstance);
-            _gameInstance.Init();
+            Point point = new Point();
+            WindowManager.DefaultDisplay.GetRealSize(point);
+            _gameInstance.Init(new Vector2(point.X, point.Y));
             Window.DecorView.SystemUiVisibility |= (StatusBarVisibility)(int)
                 (SystemUiFlags.HideNavigation
                 | SystemUiFlags.Fullscreen

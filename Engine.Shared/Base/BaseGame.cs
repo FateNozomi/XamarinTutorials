@@ -19,10 +19,19 @@ namespace Engine.Shared.Base
         /// <summary>
         /// Initializes the game
         /// </summary>
-        public virtual void Init()
+        public virtual void Init(Vector2 displayDimensions)
         {
-            Renderer.Instance.Init(InitialResolution);
+            Single newHeight = (InitialResolution.X / displayDimensions.X) * displayDimensions.Y;
+            Vector2 resolution = new Vector2(InitialResolution.X, newHeight);
+            Renderer.Instance.Init(resolution, displayDimensions, CalculateExtraOffset(newHeight - InitialResolution.Y));
         }
+
+        /// <summary>
+        /// Calculates the offset based on the height differnece
+        /// </summary>
+        /// <param name="heightDifference"></param>
+        /// <returns></returns>
+        protected abstract Vector2 CalculateExtraOffset(Single heightDifference);
 
         /// <summary>
         /// Draws our objects
