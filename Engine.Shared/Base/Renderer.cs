@@ -1,7 +1,9 @@
-﻿using OpenTK;
+﻿using Engine.Shared.Graphics;
+using OpenTK;
 using OpenTK.Graphics.ES30;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Engine.Shared.Base
@@ -27,6 +29,11 @@ namespace Engine.Shared.Base
         /// The target dimensions of the display
         /// </summary>
         private Vector2 _viewOffset;
+
+        /// <summary>
+        /// The canvas that contain all the drawables to be drawn
+        /// </summary>
+        private readonly List<Canvas> _canvases = new List<Canvas>();
 
         /// <summary>
         /// The instance of the renderer
@@ -80,6 +87,29 @@ namespace Engine.Shared.Base
             GL.Viewport((int)_viewOffset.X, (int)_viewOffset.Y, (int)_scaledDimensions.X, (int)_scaledDimensions.Y);
             GL.ClearColor(0f, 0.4f, 0f, 1f);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+
+            foreach (Canvas canvas in _canvases)
+            {
+                canvas.Draw();
+            }
+        }
+
+        /// <summary>
+        /// Adds the canvas to the list of canvases
+        /// </summary>
+        /// <param name="canvasToAdd"></param>
+        internal void AddCanvas(Canvas canvasToAdd)
+        {
+            _canvases.Add(canvasToAdd);
+        }
+
+        /// <summary>
+        /// Removes the canvas from the list of canvases
+        /// </summary>
+        /// <param name="canvasToAdd"></param>
+        internal void RemoveCanvas(Canvas canvas)
+        {
+            _canvases.Remove(canvas);
         }
     }
 }
