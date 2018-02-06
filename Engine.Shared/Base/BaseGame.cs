@@ -12,10 +12,9 @@ namespace Engine.Shared.Base
         /// </summary>
         protected BaseGame()
         {
-
         }
 
-        public Vector2 InitialResolution { get; }
+        public virtual Vector2 InitialResolution { get; }
 
         /// <summary>
         /// Initializes the game

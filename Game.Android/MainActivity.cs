@@ -1,18 +1,21 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Engine.Android;
+using Game.Shared.Base;
 
 namespace Game.Android
 {
-    [Activity(Label = "Game.Android", MainLauncher = true)]
-    public class MainActivity : Activity
+    [Activity(Label = "Game.Android", MainLauncher = true, Theme = "@style/MainTheme")]
+    public class MainActivity : GameActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        /// <summary>
+        /// Creates the activity
+        /// </summary>
+        public MainActivity()
+            :base(new GLGame())
         {
-            base.OnCreate(savedInstanceState);
 
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
         }
     }
 }

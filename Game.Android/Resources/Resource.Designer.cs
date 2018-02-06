@@ -60,8 +60,8 @@ namespace Game.Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int app_name = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int app_name = 2130968576;
 			
 			static String()
 			{
@@ -69,6 +69,22 @@ namespace Game.Android
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int MainTheme = 2130903040;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

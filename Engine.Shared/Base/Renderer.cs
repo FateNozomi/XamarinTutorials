@@ -23,6 +23,9 @@ namespace Engine.Shared.Base
         /// </summary>
         public static Renderer Instance => _instance ?? (_instance = new Renderer());
 
+        /// <summary>
+        /// The target dimensions of the display
+        /// </summary>
         public Vector2 TargetDimensions => _targetDimensions;
 
         private Renderer()
